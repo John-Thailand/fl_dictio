@@ -1,4 +1,5 @@
 import 'package:fl_dictio/constants.dart';
+import 'package:fl_dictio/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
@@ -22,7 +23,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
       ),
       home: HomePage(),
       routes: {
-        "favorites": => FavoritesPage(),
+        "favorites": (_) => FavoritesPage(),
         "history": (_) => HistoryPage(),
       },
     );

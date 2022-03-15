@@ -8,6 +8,6 @@ final searchControllerProvider =
     StateProvider<TextEditingController>((ref) => TextEditingController());
 
 final searchResultProvider =
-    StateProvider<OwlBotResponse>((ref) => jsonDecode(''));
+    StateProvider<OwlBotResponse?>((ref) => jsonDecode(''));
 final loadingProvider = StateProvider<bool>((ref) => false);
 final errorProvider = StateProvider<String>((ref) => '');
